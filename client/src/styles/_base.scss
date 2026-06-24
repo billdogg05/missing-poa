@@ -1,0 +1,93 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: $bg-base;
+    color: $text-base;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: $font-xl;
+    font-weight: 700;
+    color: $heading;
+}
+
+h2 {
+    font-size: $font-lg;
+    font-weight: 700;
+    color: $heading;
+}
+
+h3 {
+    font-size: $font-md;
+    font-weight: 600;
+    color: $heading;
+}
+
+h4 {
+    font-size: $font-sm;
+    font-weight: 600;
+    color: $heading;
+}
+
+.highlight {
+    font-size: $font-xs;
+    font-weight: 600;
+    color: $primary;
+}
+
+a {
+    font-weight: 500;
+    color: $primary;
+    text-decoration: none;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+input {
+    @include border;
+    padding: 4px 16px;
+    background: $bg-card;
+    color: $text-base;
+    width: stretch;
+}
+input:focus {
+    border-color: $primary;
+    outline: none;
+    box-shadow: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+// container
+.container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+.form-container {
+    max-width: 734px;
+    width: 100%;
+    margin: 0 auto;
+}

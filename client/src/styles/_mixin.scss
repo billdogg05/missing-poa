@@ -1,0 +1,6 @@
+@use 'variables' as *;
+
+@mixin border {
+    border: 1px solid $text-base;
+    border-radius: $radius-base;
+}
