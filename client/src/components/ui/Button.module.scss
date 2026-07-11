@@ -1,0 +1,22 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixin' as m;
+
+.primary {
+    @include m.button(v.$primary, v.$text-base, v.$text-alter)
+}
+.secondary {
+    @include m.button(v.$text-base, v.$text-alter, v.$primary)
+}
+
+.tableEdit {
+    @include m.button(v.$text-base, v.$text-alter, v.$primary, v.$spacing-xs, v.$spacing-md, v.$font-xs)
+}
+
+.tableDelete {
+    @include m.button(v.$error, v.$text-base, v.$text-alter, v.$spacing-xs, v.$spacing-md, v.$font-xs)
+}
+
+
+.btn {
+    width: 16px;
+}

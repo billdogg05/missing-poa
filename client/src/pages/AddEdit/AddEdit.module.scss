@@ -1,0 +1,43 @@
+@use '../../styles/variables' as v;
+
+.form {
+    padding: v.$spacing-md;
+    background-color: v.$bg-card;
+    border-radius: v.$radius-base;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: v.$spacing-md;
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: v.$spacing-xs;
+
+        select {
+            cursor: pointer;
+        }
+    }
+
+    .inputWrapper {
+        display: grid;
+        gap: v.$spacing-md;
+        grid-template-columns: repeat(2, 1fr);
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            gap: v.$spacing-xs;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+    }
+
+    &>a {
+        width: 100%;
+        margin-top: v.$spacing-md;
+    }
+}

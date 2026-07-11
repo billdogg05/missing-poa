@@ -1,6 +1,27 @@
 @use 'variables' as *;
 
-@mixin border {
-    border: 1px solid $text-base;
+@mixin border($border-color: $text-base) {
+    border: 1px solid $border-color;
     border-radius: $radius-base;
+}
+
+@mixin button($bg: $text-base, $text: $text-alter, $hover-bg: $primary,
+$y-spacing: $spacing-sm, $x-spacing: $spacing-lg, $font-size-base: $font-sm) {
+    padding: $y-spacing $x-spacing;
+    border-radius: $radius-base;
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: $text;
+    background: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    width: fit-content;
+
+    &:hover {
+        text-decoration: none;
+        background: $hover-bg;
+        color: $text-base;
+    }
 }

@@ -1,0 +1,85 @@
+@use '../../../styles/variables' as v;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: v.$spacing-md 0;
+
+    .tableBody {
+        display: grid;
+        gap: v.$spacing-sm;
+
+        tr {
+            background: v.$bg-card;
+            border-radius: v.$radius-base;
+
+            td {
+                display: flex;
+                gap: v.$spacing-sm;
+                align-items: center;
+
+                .copyIcon {
+                    cursor: pointer;
+                    padding: 2px;
+                    width: 16px;
+                    height: auto;
+                }
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    background: v.$text-muted;
+                    border-radius: v.$radius-base;
+                }
+
+                .checkbox {
+                    padding: 0;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid v.$primary;
+                    border-radius: 4px;
+                    background: transparent;
+                    cursor: pointer;
+                    margin: 0;
+                    flex-shrink: 0;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:checked::after {
+                        content: "";
+                        position: absolute;
+                        // left: 0px;
+                        top: 1px;
+                        width: 4px;
+                        height: 8px;
+                        border: solid v.$text-base;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(40deg);
+                    }
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .tableHead, .tableBody {
+        th {
+            text-align: left;
+        }
+        tr {
+            padding: v.$spacing-sm v.$spacing-md;
+            display: grid;
+            grid-template-columns: 220px 80px 1fr 120px 100px fit-content(80px);
+            gap: v.$spacing-md;
+        }
+    }
+}

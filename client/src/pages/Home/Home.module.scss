@@ -1,0 +1,7 @@
+@use '../../styles/variables' as v;
+
+.topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+@use '../../styles/variables' as v;
+
+.footer {
+    background-color: v.$text-alter;
+    border-radius: v.$radius-base;
+    padding: v.$spacing-md 0;
+    margin: v.$spacing-md 0;
+
+    p {
+        text-align: center;
+    }
+}

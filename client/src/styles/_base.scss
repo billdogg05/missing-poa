@@ -16,9 +16,14 @@ body {
     color: $text-base;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+}
+#root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+footer {
+    margin-top: auto;
 }
 
 h1 {
@@ -62,10 +67,10 @@ label {
     font-weight: 600;
 }
 
-input {
+input, select {
     @include border;
     padding: 4px 16px;
-    background: $bg-card;
+    background: none;
     color: $text-base;
     width: stretch;
 }
@@ -90,4 +95,9 @@ a:hover {
     max-width: 734px;
     width: 100%;
     margin: 0 auto;
+}
+section {
+    margin: $spacing-md 0;
+    display: inline-block;
+    width: stretch;
 }

@@ -1,0 +1,47 @@
+@use '../../styles/variables' as v;
+
+.header {
+    background: v.$primary;
+    padding: v.$spacing-md;
+    border-radius: v.$radius-base;
+    margin: v.$spacing-md 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: v.$font-md;
+        font-weight: 700;
+        color: v.$text-alter;
+        display: flex;
+        align-items: center;
+        gap: v.$spacing-sm;
+
+        &:hover {
+            color: v.$text-base;
+            text-decoration: none;
+        }
+        &.active {
+            color: v.$text-base;
+        }
+    }
+    
+    .nav {
+        display: flex;
+        align-items: start;
+        gap: v.$spacing-lg;
+    }
+    .navLink {
+        // font-size: v.$font-sm;
+        font-weight: 700;
+        color: v.$text-alter;
+    
+        &:hover {
+            color: v.$text-base;
+            text-decoration: none;
+        }
+        &.active {
+            color: v.$text-base;
+        }
+    }
+}
